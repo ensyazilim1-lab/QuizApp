@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+  <div class="app-wrapper">
+    <header class="top-bar">
+      <div class="active-subject" id="activeSubject"></div>
+      <div class="theme-control">
+        <span class="sun-icon">☀️</span>
+        <button type="button" class="theme-switch" id="themeSwitch" aria-label="Toggle theme">
+          <span class="theme-knob"></span>
+        </button>
+        <span class="moon-icon">🌙</span>
+      </div>
+    </header>
+
+    <main class="main-panel">
+      <section class="start-screen" id="startScreen">
+        <div class="start-copy">
+          <h1 class="hero-title">Welcome to the <span>Frontend Quiz!</span></h1>
+          <p class="hero-subtitle">Pick a subject to get started.</p>
+        </div>
+        <div class="subject-list" id="subjectList"></div>
+      </section>
+
+      <section class="quiz-screen hidden" id="quizScreen">
+        <div class="question-meta">
+          <p class="question-counter" id="questionCounter"></p>
+          <h2 class="question-heading" id="questionHeading"></h2>
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <div class="question-interactions">
+          <div class="options-list" id="optionsList"></div>
+          <button type="button" class="action-btn" id="submitAnswerBtn">Submit Answer</button>
+          <button type="button" class="action-btn hidden" id="nextQuestionBtn">Next Question</button>
+          <p class="validation-msg hidden" id="validationMsg">Please select an answer</p>
+        </div>
+      </section>
+
+      <section class="result-screen hidden" id="resultScreen">
+        <div class="result-copy">
+          <h1 class="hero-title">Quiz completed <span>You scored...</span></h1>
+        </div>
+
+        <div class="result-actions">
+          <div class="score-box" id="scoreBox"></div>
+          <button type="button" class="action-btn" id="playAgainBtn">Play Again</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
